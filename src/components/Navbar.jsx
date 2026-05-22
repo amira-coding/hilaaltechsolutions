@@ -62,6 +62,7 @@ const Navbar = () => {
         </button>
       </div>
 
+
       {/* Mobile Nav */}
       <AnimatePresence>
         {isMobileMenuOpen && (

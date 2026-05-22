@@ -129,13 +129,20 @@ const Home = () => {
       </section>
 
       {/* 3. ABOUT SHORT INTRO */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-16 md:py-24 bg-gray-50 overflow-hidden">
         <div className="container mx-auto px-6">
-          <div className="flex flex-col lg:flex-row gap-16 items-center">
-            <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="lg:w-1/2">
-              <span className="text-accent font-bold tracking-wider uppercase text-sm mb-2 block">Who We Are</span>
-              <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">Where Modern Design Meets Flawless Execution.</h2>
-              <div className="prose prose-lg text-gray-600 mb-8">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
+            <motion.div 
+              initial={{ opacity: 0, x: -30 }} 
+              whileInView={{ opacity: 1, x: 0 }} 
+              viewport={{ once: true }} 
+              className="w-full lg:w-1/2 text-center lg:text-left"
+            >
+              <span className="text-accent font-bold tracking-wider uppercase text-sm mb-3 block">Who We Are</span>
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                Where Modern Design Meets <span className="text-primary">Flawless Execution.</span>
+              </h2>
+              <div className="prose prose-lg text-gray-600 mb-8 mx-auto lg:mx-0 max-w-2xl">
                 <p>
                   At Hilaal Tech Solutions, we believe your website should be your hardest-working asset. Founded by industry veterans Asad and Amira, we bridge the gap between stunning visual design and robust technical engineering.
                 </p>
@@ -143,23 +150,33 @@ const Home = () => {
                   We don't just write code; we solve complex business problems. Whether you need a corporate web presence, a high-converting landing page, or a massive e-commerce platform, our agency delivers tailored solutions focused exclusively on your growth.
                 </p>
               </div>
-              <div className="flex gap-6 mt-8 p-6 bg-white rounded-2xl shadow-sm border border-gray-100">
-                <div className="flex-1 text-center border-r border-gray-100">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-10 p-6 bg-white rounded-3xl shadow-sm border border-gray-100 max-w-xl mx-auto lg:mx-0">
+                <div className="flex-1 text-center py-2 sm:py-0 sm:border-r border-gray-100">
                   <div className="text-3xl font-bold text-primary mb-1">Asad</div>
                   <div className="text-sm font-medium text-gray-500">Co-Founder, Tech Lead</div>
                 </div>
-                <div className="flex-1 text-center">
+                <div className="w-full h-px sm:hidden bg-gray-100"></div>
+                <div className="flex-1 text-center py-2 sm:py-0">
                   <div className="text-3xl font-bold text-primary mb-1">Amira</div>
                   <div className="text-sm font-medium text-gray-500">Co-Founder, Design Strategy</div>
                 </div>
               </div>
             </motion.div>
-            <div className="lg:w-1/2 relative">
-              <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl relative">
-                <img src="src/assets/team.jpeg" alt="Agency Team" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-primary/20 backdrop-blur-[2px] hover:backdrop-blur-0 transition-all duration-500"></div>
+            
+            <motion.div 
+              initial={{ opacity: 0, x: 30 }} 
+              whileInView={{ opacity: 1, x: 0 }} 
+              viewport={{ once: true }}
+              className="w-full lg:w-1/2 relative"
+            >
+              <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl relative group">
+                <img src="/src/assets/team.jpeg" alt="Agency Team" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <div className="absolute inset-0 bg-primary/10 backdrop-blur-[1px] group-hover:backdrop-blur-0 transition-all duration-500"></div>
+                
+                {/* Decorative element for mobile/tablet */}
+                <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-accent/20 rounded-full blur-2xl -z-10 animate-pulse"></div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
