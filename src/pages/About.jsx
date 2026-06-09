@@ -2,7 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Lightbulb, Shield, Target, Users } from 'lucide-react';
 import CTA from '../components/CTA';
-
+import asadImage from '../assets/asadkee.jpeg';
+import amiraImage from '../assets/amira.jpeg';
 const About = () => {
   const values = [
     { icon: <Lightbulb size={32} />, title: "Innovation", desc: "Constantly pushing boundaries and adopting modern technologies." },
@@ -79,7 +80,7 @@ const About = () => {
             {/* Asad */}
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="flex flex-col bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 group">
               <div className="h-96 overflow-hidden relative">
-                <img src="src/assets/asadkee.jpeg" alt="Asad" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[10%]" />
+               <img src={asadImage} alt="Asad" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[10%]" />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 text-white">
                    <h3 className="text-3xl font-bold mb-1">Asad</h3>
@@ -99,7 +100,7 @@ const About = () => {
             {/* Amira */}
             <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="flex flex-col bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 group">
               <div className="h-96 overflow-hidden relative">
-                <img src="src/assets/amira.jpeg" alt="Amira" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[10%]" />
+                <img src={amiraImage} alt="Amira" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 filter grayscale-[10%]" />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 text-white">
                    <h3 className="text-3xl font-bold mb-1">Amira</h3>
