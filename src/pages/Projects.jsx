@@ -72,7 +72,7 @@ const Projects = () => {
       </section>
 
       {/* FILTER BUTTONS */}
-      <section className="pt-12 pb-6 bg-gray-50 border-b border-gray-200 sticky top-[80px] z-30">
+      <section className="pt-12 pb-6 bg-gray-50 border-b border-gray-200 z-30">
         <div className="container mx-auto px-6">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map(cat => (
