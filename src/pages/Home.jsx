@@ -6,7 +6,7 @@ import {
   Zap, Smartphone, Search, Database, Shield, Star, CheckCircle, Rocket, Target, Users
 } from 'lucide-react';
 import CTA from '../components/CTA';
-
+import teamImage from '../assets/team.jpeg';
 const Home = () => {
   const services = [
     { icon: <Layout size={28} />, title: "Web Design", desc: "Data-driven UI/UX design that converts visitors into customers." },
@@ -170,7 +170,7 @@ const Home = () => {
               className="w-full lg:w-1/2 relative"
             >
               <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl relative group">
-                <img src="/src/assets/team.jpeg" alt="Agency Team" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <img  src={teamImage} alt="Agency Team" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-primary/10 backdrop-blur-[1px] group-hover:backdrop-blur-0 transition-all duration-500"></div>
                 
                 {/* Decorative element for mobile/tablet */}
